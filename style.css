@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 375px;
+}
+
+.card {
+  padding: 0 1em;
+  line-height: 1.5;
+  color: var(--Dark-Slate-Grey);
+}
+
+.image-container {
+  border-radius: 0em 0em 0 0;
+  width: 100%;
+  content: url(./assets/images/illustration-sign-up-mobile.svg);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: 0.4em 0;
+}
+
+.card-text {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+li {
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: space-between;
+  justify-content: start;
+}
+
+li::before {
+  content: url("./assets/images/icon-list.svg");
+  margin-right: 1em;
+}
+
+label {
+  font-size: 0.8rem;
+}
+
+.email-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+#email {
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+
+input,
+button {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  border-radius: 0.5em;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid var(--Grey);
+  opacity: 0.9;
+}
+
+button {
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--Tomato);
+  transition: all 1s;
+}
+
+.card-success {
+  padding: 0 1em;
+  max-width: 375px;
+  color: var(--Dark-Slate-Grey);
+}
+
+.card-icon {
+  margin-top: 5em;
+  width: 60px;
+}
+
+.button-dismiss {
+  margin-top: 12em;
+}
+
+.error-message {
+  color: var(--Tomato);
+  font-size: 0.9rem;
+}
+
+/*   media queries    */
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--Charcoal-Grey);
+  }
+
+  .container {
+    max-width: 850px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--White);
+    gap: 1em;
+    border-radius: 1em;
+    padding: 1.5em;
+    box-shadow: 0px 0px 37px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card {
+    margin-top: 2em;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .image-container {
+    content: url(./assets/images/illustration-sign-up-desktop.svg);
+    max-width: 49%;
+  }
+
+  li {
+    padding: 0.3em 0;
+    font-size: 1rem;
+  }
+
+  input {
+    cursor: pointer;
+  }
+
+  .card-success {
+    background-color: white;
+    border-radius: 2.5em;
+    max-width: 510px;
+    padding: 0 4em;
+    box-shadow: 0px 0px 37px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-success > h1 {
+    font-size: 3.5rem;
+  }
+
+  .button-dismiss {
+    margin: 2.5em 0 3em 0;
+  }
+
+  .card-icon {
+    margin-top: 3em;
+  }
+
+  button:hover {
+    box-shadow: 0px 16px 47px -9px hsl(4, 100%, 67%);
+  }
+}
+
+/* utility */
+
+.hidden {
+  display: none;
+}
